@@ -15,7 +15,7 @@ jobs:
     
     - name: download zip file
       run: |
-        COMMIT_NUMBER=`cd linux && git log -1 --format="%H"`
+        COMMIT_NUMBER=`git submodule status | cut -f 2 -d ' '`
         wget https://github.com/minskMedve/linux/archive/$COMMIT_NUMBER.zip
         unzip $COMMIT_NUMBER.zip
       
