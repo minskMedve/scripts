@@ -22,6 +22,5 @@ jobs:
     - name: build
       run: |
         COMMIT_NUMBER=`git rev-parse @:./linux`
-        cd linux-$COMMIT_NUMBER
         ./build-linux.sh ./linux-$COMMIT_NUMBER tinyconfig
       
