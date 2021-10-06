@@ -1,0 +1,19 @@
+name: Compile test cases
+
+on:
+  push:
+    paths:
+      - "test"
+jobs:
+  build:
+
+    runs-on: ubuntu-20.04
+    
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Install Dependencies
+      run: ./install-deps.sh
+      
+    - name: Compile test cases
+      run: make -C test
