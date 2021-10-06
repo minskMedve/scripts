@@ -3,7 +3,7 @@ name: Compile test cases
 on:
   push:
     paths:
-      - "test"
+      - "test/**"
 jobs:
   build:
 
